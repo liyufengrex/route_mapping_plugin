@@ -167,6 +167,7 @@ function getImportPath(from: string, to: string): string {
   return importPath.replace('.ets', '')
 }
 
+// 生成 builder 注册函数
 function generateRouterRegisterFile(config: PluginConfig, pageList: PageInfo[]) {
 
   pageList.forEach((item) => {
@@ -204,10 +205,10 @@ function generateRouterRegisterFile(config: PluginConfig, pageList: PageInfo[]) 
 
 }
 
+// 在 route_map.json 文件中添加路由注册信息
 function generateRouterMap(config: PluginConfig, routeMap: RouteMap) {
   logger('generateRouterMap: ', JSON.stringify(routeMap))
   writeFileSync(config.routerMapPath, JSON.stringify(routeMap, null, 2), { encoding: "utf8" })
-
 }
 
 function getBuilderRegisterEtsAbsolutePath(config: PluginConfig, fileName: string): string {
@@ -241,6 +242,7 @@ function deleteIndexImport(config: PluginConfig) {
   }
 }
 
+// 在 module.json5 文件中添加 "routerMap": "$profile:route_map"
 function checkIfModuleRouterMapConfig(config: PluginConfig) {
   logger("===========================================")
   logger('checkIfModuleRouterMapConfig')
