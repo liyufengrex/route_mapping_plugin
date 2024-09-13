@@ -125,6 +125,17 @@ export default {
 3. 在页面文件使用 Route 注解修饰器，即可自动生成系统路由表文件
 
 例如：
+新建一个 Route.ets 作为修饰器
+```ts
+export function Route(param: Param) {
+  return Object
+}
+
+export interface Param {
+  name: string,
+}
+```
+使用修饰器对页面进行注解
 ```ts
 @Route({ name: 'BuilderNodeExample' })
 @Component
