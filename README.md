@@ -3,8 +3,8 @@
 
 示例如何使用 ts 开发 hvigor 构建任务， 本示例演示通过 注解 + 构建任务 自动生成系统路由注册表。
 
-+ 生成并配置 `route_map.json` 文件
-+ 生成并配置 `每个页面对应的 Builder 函数`
++ 自动生成和配置 `route_map.json` 文件
++ 自动生成和配置 `每个页面对应的 Builder 函数`
 + 最后可通过 `pushPathByName` 等路由接口进行页面跳转
 
 
