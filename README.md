@@ -102,8 +102,8 @@ export default {
 1. 已在 `hvigor-config.json5` 文件添加本插件依赖
 ```ts
 "dependencies": {
-    "route-mapping-plugin": "1.0.0"   // 如果已发布
-    "route-mapping-plugin": "file:../script/route_mapping_plugin"  //本地依赖
+    "route_mapping_plugin": "1.0.0"   // 如果已发布
+    "route_mapping_plugin": "file:../script/route_mapping_plugin"  //本地依赖
   }
 ```
 2. 已在 `` 文件添加并导入
